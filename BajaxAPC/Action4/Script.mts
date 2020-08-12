@@ -66,7 +66,7 @@ Sub PanelInteraccion()
 			ExitActionIteration
 		End If
 	Wend 
-	wait 1
+	wait 10
 	
 	If JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Panel de Interacción").JavaButton("Ver Detalles").Exist(1) Then
 			If JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Panel de Interacción").JavaButton("Buscar ahora").Exist(1) Then
@@ -81,7 +81,8 @@ Sub PanelInteraccion()
 	
 End Sub
 Sub ProductosAsignados()
-	
+
+			 
 		t = 0
 		While (JavaWindow("Ejecutivo de interacción").JavaInternalFrame("Buscar: Productos asignados").JavaEdit("TextFieldNative$1_2").Exist) = False
 			wait 1
